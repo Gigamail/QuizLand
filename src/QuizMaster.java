@@ -51,6 +51,7 @@ public class QuizMaster {
         JButton calculusButton = createStyledButton("Calculus", "Breathe Fire", "./img/calculus.jpg");
         JButton harryPotterButton = createStyledButton("Harry Potter", "Breathe Fire", "./img/harry_potter.jpg");
         JButton ChessGameButton = createStyledButton("Chess Game", "Breathe Fire", "./img/chess.jpeg");
+        JButton pyGameButton = createStyledButton("Py Game", "Breathe Fire", "./img/pygame.png");
 
         calculusButton.addActionListener(new ActionListener() {
             @Override
@@ -64,7 +65,12 @@ public class QuizMaster {
             	  chessMaster Ch = new chessMaster();
             }
         });
-      
+        pyGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	  Pygame py = new Pygame();
+            }
+        });
         harryPotterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,6 +81,7 @@ public class QuizMaster {
         buttonPanel.add(calculusButton);
         buttonPanel.add(harryPotterButton);
         buttonPanel.add(ChessGameButton);
+        buttonPanel.add(pyGameButton);
   
         // Add the top, welcome label, and button panel to the frame
         topPanel.add(welcomeLabel);
